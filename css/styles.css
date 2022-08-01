@@ -12,7 +12,6 @@
 
 }
 
-
 body {
   font-family: var(--font-main);
   font-size: 14px;
@@ -56,7 +55,7 @@ button {
 
 .link {
   text-decoration: none;
-  color: var(--color-main);
+  color: inherit;
 }
 
 .title {
@@ -178,7 +177,6 @@ button {
   background-size: contain;
 }
 
-
 /* hero */
 
 .hero {
@@ -197,9 +195,6 @@ button {
   background-position: center;
   margin-left: auto;
   margin-right: auto;
-
-
-
 
   text-align: center;
 }
@@ -229,10 +224,15 @@ button {
 
   color: #FFFFFF;
   background-color: var(--color-accent);
-
+  border: 1px solid transparent;
   border-radius: 4px;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+}
 
+.hero-button:hover,
+.hero-button:focus {
+  background: #188CE8;
+  border: 1px solid #000000;
 }
 
 /* benefits */
@@ -259,8 +259,6 @@ button {
   justify-content: center;
   background-color: #F5F4FA;
 }
-
-
 
 .benefits-subtitle {
   margin-bottom: 10px;
@@ -311,7 +309,6 @@ button {
 }
 
 .team-item {
-
   width: 270px;
   background-color: #fff;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
@@ -351,7 +348,7 @@ button {
   justify-content: center;
 }
 
-.socials-list a:not(:last-child) {
+.socials-item:not(:last-child) {
   margin-right: 10px;
 }
 
@@ -427,7 +424,7 @@ button {
   background-color: #2F303A;
 }
 
-.footer > .container {
+.footer>.container {
   display: flex;
   align-items: baseline;
 }
@@ -468,6 +465,10 @@ button {
   color: #FFFFFF;
 }
 
+/* .footer-socials {
+
+} */
+
 .footer-coll {
   display: block;
   margin-bottom: 20px;
@@ -475,6 +476,19 @@ button {
   text-transform: uppercase;
 
   color: #FFFFFF;
+}
+
+.footer-socials-link:hover,
+.footer-socials-link:focus {
+  background-color: var(--color-accent);
+}
+
+.footer-socials-item {
+  display: inline-flex;
+}
+
+.footer-socials-item:not(:last-child) {
+  margin-right: 10px;
 }
 
 .footer-socials-link {
@@ -488,21 +502,9 @@ button {
   background-color: rgba(255, 255, 255, 0.1);
 }
 
-.footer-socials-link:hover,
-.footer-socials-link:focus {
-  background-color: var(--color-accent);
-}
-
-.footer-socials-link:not(:last-child) {
-  margin-right: 10px;
-}
-
 .footer-icon {
   fill: #FFFFFF;
 }
-
-
-
 
 /* portfolio */
 
@@ -518,7 +520,6 @@ button {
 
 .list-btn-link {
   padding: 6px 22px;
-
 
   font-family: var(--font-main);
   font-weight: 500;
@@ -543,10 +544,9 @@ button {
 }
 
 .portfolio-item {
-  width: 370px;
+  flex-basis: calc((100% - 60px) / 3);
   margin-right: 30px;
   margin-bottom: 30px;
-
 }
 
 .portfolio-link {
@@ -556,7 +556,6 @@ button {
 .portfolio-link:hover,
 .portfolio-link:focus {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
-
 }
 
 .portfolio-item:nth-child(3n) {
